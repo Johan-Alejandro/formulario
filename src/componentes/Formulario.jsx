@@ -66,7 +66,12 @@ const Formulario = () => {
             placeholder="Nombre"
             name="Nombre"
             value={nombre}
-            onChange={(event) => setNombre(event.target.value)}
+            onChange={(event) => {
+              const inputValue = event.target.value;
+              if (/^[a-zA-Z\s]*$/.test(inputValue)) {
+                setNombre(inputValue);
+              }
+            }}
           />
           <input
             type="email"
