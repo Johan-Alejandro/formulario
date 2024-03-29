@@ -9,6 +9,10 @@ const Formulario = () => {
   const [mostrar, setMostrar] = useState(false);
   const [alert, setAlert] = useState({ message: "", color: "" });
 
+  const validarNombre = (nombre) => {
+    const regex = /^[a-zA-Z0\s]+$/;
+    return regex.test(nombre);
+  };
   const validarContraseña = (password) => {
     const expresion = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[.!@#$%^&*]).{8,}$/;
     return expresion.test(password);
@@ -21,6 +25,15 @@ const Formulario = () => {
       setAlert({ message: "Hay campos vacíos.", color: "danger" });
       return;
     }
+    if (!validarNombre(nombre)) {
+      setMostrar(true);
+      setAlert({
+        message: "Nombre no permite el ingreso de caracteres",
+        color: "danger",
+      });
+      return;
+    }
+
     if (contraseña === clave) {
       if (!validarContraseña(contraseña)) {
         setMostrar(true);
