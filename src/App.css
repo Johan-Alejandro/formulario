@@ -1,0 +1,27 @@
+.registro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.card {
+  align-content: center;
+  margin: 20px;
+  width: 18rem;
+}
+h3 {
+  text-align: center;
+}
+.rrs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 20px;
+}
+.rrs button {
+  border-radius: 20px;
+}
