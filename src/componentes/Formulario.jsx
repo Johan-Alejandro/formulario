@@ -22,7 +22,7 @@ const Formulario = () => {
     event.preventDefault();
     if (nombre === "" || email === "" || contraseña === "" || clave === "") {
       setMostrar(true);
-      setAlert({ message: "Hay campos vacíos.", color: "danger" });
+      setAlert({ message: "Hay campos vacíos", color: "danger" });
       return;
     }
     if (!validarNombre(nombre)) {
