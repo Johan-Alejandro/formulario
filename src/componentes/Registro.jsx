@@ -14,15 +14,19 @@ const Registro = () => {
           <h3>Crea Una Cuenta</h3>
           <div className="rrs">
             <button>
-              <SocialButtom icon={faFacebook} />
+              <a href="https://www.facebook.com/">
+                <SocialButtom icon={faFacebook} />
+              </a>
             </button>
             <button>
-              <a href="https://github.com/Johan-Alejandro">
+              <a href="https://github.com">
                 <SocialButtom icon={faGithub} />
               </a>
             </button>
             <button>
-              <SocialButtom icon={faLinkedin} />
+              <a href="https://www.linkedin.com/">
+                <SocialButtom icon={faLinkedin} />
+              </a>
             </button>
           </div>
           <p>O usa tu email para registrarte</p>
